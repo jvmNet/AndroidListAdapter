@@ -1,6 +1,8 @@
 package com.example.carlist.model.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
@@ -27,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         ListView list_car = (ListView) findViewById(R.id.list_cars_id);
         list_car.setAdapter(carsAdapter);
 
+    }
+
+    public void changeActivityClick(View view){
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
     private List<Cars> getItems(){
